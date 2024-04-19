@@ -1,18 +1,31 @@
 'use strict';
 
-function makeArray(firstArray, secondArray, maxLength) {
-    
-    const newArray = firstArray.concat(secondArray);
- 
-    if (newArray.length <= maxLength) {
-        return newArray;
-    }
-    else if (newArray.length > maxLength) {
-        newArray.length = maxLength;
-        return newArray;
-    }
+  function makeArray (firstArray, secondArray, maxLength){
 
+  const newArray = firstArray.concat(secondArray);
+    if (newArray.length <= maxLength) {
+      return newArray;
     }
+    else  {
+      return newArray.splice(newArray[maxLength],maxLength)
+    } 
+}
+
+// function makeArray(firstArray, secondArray, maxLength) {
+    
+//     const newArray = firstArray.concat(secondArray);
+ 
+//     if (newArray.length <= maxLength) {
+//         return newArray;
+//     }
+//     else if (newArray.length > maxLength) {
+//         newArray.length = maxLength;
+//         return newArray;
+//     }
+
+// }
+    
+// //Ваше рішення завдання 2 добре, але більш доцільно використовувати просто if  else , замість if  else if.
 
 
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
