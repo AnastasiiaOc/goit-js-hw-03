@@ -7,8 +7,7 @@
       return newArray;
     }
     else  {
-      return newArray.splice(newArray[maxLength],maxLength)
-    } 
+      return newArray.slice(0, maxLength)
 }
 
 // function makeArray(firstArray, secondArray, maxLength) {
